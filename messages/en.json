@@ -41,7 +41,10 @@
       "phone":"Phone",
       "name":"Name",
       "message":"Message",
-      "send":"Send Email"
+      "send":"Send Email",
+      "please":"Please fill out all fields",
+      "sending":"Sending...",
+      "sent":"Sent!"
     },
     "Not-Found":{
       "not":"It seems you have lost your way, try to go back where you came from."

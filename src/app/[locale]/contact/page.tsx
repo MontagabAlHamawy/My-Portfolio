@@ -26,12 +26,12 @@ export default function Contact() {
     const messageField = (document.getElementById("message") as HTMLTextAreaElement);
 
     if (!nameField.value || !emailField.value || !messageField.value) {
-      setStatus("Please fill out all fields");
+      setStatus(`${t("please")}`);
       return;
     }
 
     const btn = (document.getElementById("button") as HTMLInputElement);
-    btn.value = "Sending...";
+    btn.value = `${t("sending")}`;
 
     const serviceID = "default_service";
     const templateID = "template_gzusr0o";
@@ -39,7 +39,7 @@ export default function Contact() {
     try {
       await emailjs.sendForm(serviceID, templateID, event.target as HTMLFormElement);
       btn.value = "Send Email";
-      setStatus("Sent!");
+      setStatus(`${t("sent")}`);
     } catch (error) {
       btn.value = "Send Email";
       setStatus(JSON.stringify(error));
@@ -138,7 +138,7 @@ export default function Contact() {
             />
           </form>
   
-          {status && <div className="mt-4 text-green-500">{status}</div>}
+          {status && <div className={`mt-4 text-green-500 ${localActive === "ar" ? "rtl" : ""}`}>{status}</div>}
         </motion.div>
       </motion.div>
     );
