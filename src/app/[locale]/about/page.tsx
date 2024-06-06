@@ -15,10 +15,6 @@ import { Roboto_Mono } from "next/font/google";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { useTransition } from "react";
-export const roboto = Roboto_Mono({
-  subsets: ['latin'],
-  display: 'swap',
-})
 
 export default function About() {
     const t = useTranslations("About");
