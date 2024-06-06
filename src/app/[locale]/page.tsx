@@ -4,13 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { staggerContainer, fadeIn } from "@/utils/motion";
-import { Roboto_Mono } from "next/font/google";
 import { usePathname } from "next/navigation";
 import { useTransition } from "react";
-export const roboto = Roboto_Mono({
-  subsets: ["latin"],
-  display: "swap",
-});
+
 
 export default function Home() {
   const t = useTranslations("Home");

@@ -13,13 +13,8 @@ import {
 } from "react-icons/fa6";
 import { BiLogoTypescript } from "react-icons/bi";
 import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
-import { Roboto_Mono } from "next/font/google";
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
-export const roboto = Roboto_Mono({
-  subsets: ["latin"],
-  display: "swap",
-});
 
 
 
@@ -52,7 +47,7 @@ export default function Skills() {
       <div className="xl:mt-10">
         <motion.h1
           variants={fadeIn("down", "tween", 0.2, 1)}
-          className={`text-2xl text-white font-extralight uppercase ${roboto.className}`}
+          className={`text-2xl text-white font-extralight uppercase `}
         >
           {t("title1")}
         </motion.h1>
@@ -92,7 +87,7 @@ export default function Skills() {
       </div>
       <motion.div variants={fadeIn("down", "tween", 0.1, 1)} className="mt-20">
         <h1
-          className={`text-2xl text-white font-extralight uppercase ${roboto.className}`}
+          className={`text-2xl text-white font-extralight uppercase`}
         >
           {t("title2")}
         </h1>
