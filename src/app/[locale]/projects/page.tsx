@@ -2,91 +2,14 @@
 import { useState } from "react";
 import Image from "next/image";
 import { PiCode, PiEye } from "react-icons/pi";
+import { MProjects } from "@/components/links";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { staggerContainer, fadeIn } from "@/utils/motion";
 
 import { useTranslations } from "next-intl";
 
-export const M_Projects = [
-  {
-    name: "3aqarat",
-    Type: "next",
-    image: "/projects/3aqarat.jpg",
-    URL: "https://3aqarat.vercel.app/",
-    code: "https://github.com/MontagabAlHamawy/3aqarat",
-  },
-  {
-    name: "DR-Needs",
-    Type: "wordpress",
-    image: "/projects/dr-needs.png",
-    URL: "https://dr-needs.com/",
-    code: "https://dr-needs.com/",
-  },
-  {
-    name: "Dwana",
-    Type: "wordpress",
-    image: "/projects/dwana.png",
-    URL: "https://dwana.net/",
-    code: "https://dwana.net/",
-  },
-  {
-    name: "Klinder-Design",
-    Type: "wordpress",
-    image: "/projects/klinder-design.png",
-    URL: "https://klinder-design.com/",
-    code: "https://klinder-design.com/",
-  },
-  {
-    name: "Metaverse",
-    Type: "next",
-    image: "/projects/metaverse.png",
-    URL: "https://metaverse.klinder-design.com/",
-    code: "https://github.com/MontagabAlHamawy/Metaverse",
-  },
-  {
-    name: "Next-Blog",
-    Type: "next",
-    image: "/projects/next-blog.png",
-    URL: "https://klinder-blog.vercel.app/",
-    code: "https://github.com/MontagabAlHamawy/Next-Blog",
-  },
-  {
-    name: "React-Blog",
-    Type: "react",
-    image: "/projects/react-blog.png",
-    URL: "https://montagabalhamawy.github.io/WP-React/",
-    code: "https://github.com/MontagabAlHamawy/WP-React",
-  },
-  {
-    name: "Sniper",
-    Type: "static",
-    image: "/projects/sniper.png",
-    URL: "https://montagabalhamawy.github.io/Sniper/",
-    code: "https://github.com/MontagabAlHamawy/Sniper",
-  },
-  {
-    name: "Klinder",
-    Type: "static",
-    image: "/projects/klinder.png",
-    URL: "https://montagabalhamawy.github.io/Klinder/",
-    code: "https://github.com/MontagabAlHamawy/Klinder",
-  },
-  {
-    name: "X-O Game",
-    Type: "static",
-    image: "/projects/x-o.png",
-    URL: "https://montagabalhamawy.github.io/X-O-Game/",
-    code: "https://github.com/MontagabAlHamawy/X-O-Game",
-  },
-  {
-    name: "Notes",
-    Type: "static",
-    image: "/projects/note.png",
-    URL: "https://montagabalhamawy.github.io/Notes/",
-    code: "https://github.com/MontagabAlHamawy/Notes",
-  },
-];
+
 
 export default function Projects() {
     const t = useTranslations("Projects");
@@ -156,7 +79,7 @@ export default function Projects() {
         variants={fadeIn("up", "tween", 0.6, 1)}
         className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 px-2 xl:px-0 gap-x-5 gap-y-7 xl:gap-x-12 xl:gap-y-10 font-extralight"
       >
-        {M_Projects.filter(
+        {MProjects.filter(
           (dd) => filterType === "all" || dd.Type === filterType
         ).map((dd, index) => (
           <div

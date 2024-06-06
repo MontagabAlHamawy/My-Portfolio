@@ -2,39 +2,9 @@
 
 import { motion } from "framer-motion";
 import { staggerContainer, fadeIn } from "@/utils/motion";
-import {
-  FaBootstrap,
-  FaHtml5,
-  FaCss3,
-  FaReact,
-  FaSquareJs,
-  FaWordpress,
-  FaGit,
-} from "react-icons/fa6";
-import { BiLogoTypescript } from "react-icons/bi";
-import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import { ProgramS, Languages } from "@/components/links";
 import { useTranslations } from "next-intl";
-import dynamic from "next/dynamic";
 
-
-
-
-export const ProgramS = [
-  { name: "HTML", Experience: 93, icon: <FaHtml5 /> },
-  { name: "CSS", Experience: 90, icon: <FaCss3 /> },
-  { name: "JS", Experience: 68, icon: <FaSquareJs /> },
-  { name: "TS", Experience: 25, icon: <BiLogoTypescript /> },
-  { name: "React", Experience: 20, icon: <FaReact /> },
-  { name: "Next.js", Experience: 35, icon: <SiNextdotjs /> },
-  { name: "Bootstrap", Experience: 55, icon: <FaBootstrap /> },
-  { name: "Tailwind", Experience: 67, icon: <SiTailwindcss /> },
-  { name: "WordPress", Experience: 40, icon: <FaWordpress /> },
-  { name: "Git", Experience: 53, icon: <FaGit /> },
-];
-export const Languages = [
-  { name: "Arabic", Experience: 70, icon: <div>Ar</div> },
-  { name: "English", Experience: 1, icon: <div>En</div> },
-];
 export default function Skills() {
   const t = useTranslations("Skills");
   return (
@@ -86,9 +56,7 @@ export default function Skills() {
         })}
       </div>
       <motion.div variants={fadeIn("down", "tween", 0.1, 1)} className="mt-20">
-        <h1
-          className={`text-2xl text-white font-extralight uppercase`}
-        >
+        <h1 className={`text-2xl text-white font-extralight uppercase`}>
           {t("title2")}
         </h1>
       </motion.div>
