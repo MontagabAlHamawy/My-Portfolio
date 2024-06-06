@@ -7,6 +7,7 @@ import { staggerContainer, fadeIn } from "@/utils/motion";
 import { useLocale, useTranslations } from "next-intl";
 import { useTransition } from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function NotFound() {
   const t = useTranslations("Not-Found");
@@ -21,9 +22,11 @@ export default function NotFound() {
       className={`w-full xl:h-[78.4vh] mt-20 flex ${localActive === "ar" ? "flex-col xl:flex-row" : "flex-col xl:flex-row-reverse"} justify-center items-center`}
     >
       <motion.div variants={fadeIn("down", "tween", 0.1, 1)}>
-        <img
+        <Image
           src={"/404.png"}
           width={700}
+          height={0}
+          alt="404"
           className=" md:mt-[-50px] ml-[-10px]"
         />
       </motion.div>

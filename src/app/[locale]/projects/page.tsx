@@ -168,9 +168,11 @@ export default function Projects() {
             className="relative flex flex-col justify-center items-center group"
           >
             <div className="relative group">
-              <img
+              <Image
                 src={dd.image}
-                alt=""
+                width={400}
+                height={0}
+                alt="s"
                 className="rounded-lg w-[400px] xl:w-[300px] transition-all"
               />
               <div className="before:bg-white/20 before:rounded-lg before:content-[''] z-0 before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0 before:opacity-0 before:transition-all before:group-hover:opacity-100 before:group-hover:bg-white/20 before:z-10"></div>

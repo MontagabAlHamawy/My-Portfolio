@@ -60,7 +60,7 @@ export default function Home() {
           variants={fadeIn("down", "tween", 0.6, 1)}
           className="bg-accent shadow-sm w-[270px]   flex items-center justify-center rounded-tl-full "
         >
-          <img
+          <Image
             src={"/m2.png"}
             width={300}
             height={300}

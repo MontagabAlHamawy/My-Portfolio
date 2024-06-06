@@ -31,7 +31,7 @@ export default function About() {
     <div className={`flex gap-y-5 xl:gap-y-10 flex-col ${localActive === "en" ? "items-start" : "items-start rtl"} pt-7 xl:pt-36 pb-10 xl:pb-20 px-4 xl:px-0 font-extralight`}>
       <motion.h1
         variants={fadeIn("up", "tween", 0.1, 1)}
-        className={`text-2xl xl:text-4xl text-white font-500 uppercase ${roboto.className}`}
+        className={`text-2xl xl:text-4xl text-white font-500 uppercase`}
       >
         {t("title")}
       </motion.h1>
@@ -116,7 +116,7 @@ export default function About() {
       className="xl:container pl-0 flex justify-center items-center w-full mr-0 pt-0 xl:pt-48 pb-10 xl:pb-20  xl:mr-[-50px]"
     >
       <div className="bg-accent shadow-sm pb-10 pt-10 flex items-center justify-center rounded-tl-full rounded-br-full  mx-auto">
-        <img
+        <Image
           src={"/About.jpg"}
           width={300}
           height={200}

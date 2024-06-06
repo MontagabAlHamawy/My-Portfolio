@@ -5,13 +5,7 @@ import { staggerContainer, fadeIn } from "@/utils/motion";
 import { FormEvent, useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 import Link from "next/link";
-import { Roboto_Mono } from "next/font/google";
 import { useLocale, useTranslations } from "next-intl";
-export const roboto = Roboto_Mono({
-  subsets: ['latin'],
-  display: 'swap',
-})
-
 
 export default function Contact() {
     const [status, setStatus] = useState<string>("");
@@ -62,7 +56,7 @@ export default function Contact() {
         <div className="mt-[-20px] xl:mt-20 mb-4 xl:mb-10">
           <motion.h1
             variants={fadeIn("down", "tween", 0.2, 1)}
-            className={`text-2xl text-white font-extralight uppercase ${roboto.className}`}
+            className={`text-2xl text-white font-extralight uppercase`}
           >
             {t("title")}
           </motion.h1>
