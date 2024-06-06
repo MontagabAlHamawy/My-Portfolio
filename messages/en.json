@@ -1,0 +1,53 @@
+{
+    "Index": {
+      "title": "Hello world!",
+      "name":"Montagab"
+    },
+    
+    "Home":{
+      "job":"Front-End Developer",
+      "hello":"Hi , I am",
+      "name":"Montagab Al-Hamawy",
+      "text":" a seasoned Front-End Developer with a passion for creative problem-solving. My expertise lies in crafting elegant and responsive web designs, where coding is not just a task but a form of artistic expression."
+    },
+    "About":{
+      "title":"About",
+      "text1":"Front-End Developer with a passion for creative problem-solving. My expertise lies in crafting elegant and responsive web designs, where coding is not just a task but a form of artistic expression.",
+      "text2":"My belief is that the webpages we create are a reflection of the people who use them. As such, I am committed to enhancing user experiences worldwide, making websites more functional and enjoyable.",
+      "text3":"With a strong foundation in Next.js, I bring a wealth of experience to every project. I am constantly seeking opportunities to further refine my skills and stay at the forefront of the ever-evolving world of web development.",
+      "namen":"Name",
+      "name":"Montagab Al-Hamawy",
+      "agen":"About",
+      "age":"20",
+      "studyn":"Study",
+      "study":"IT / Albaath University",
+      "nationalityn":"Nationality",
+      "nationality":"Syrian",
+      "addressn":"Address",
+      "address":"Syria - Homs",
+      "experiencen":"Experience",
+      "experience":"2 Years"
+    },
+    "Projects":{
+      "title":"Projects"
+    },
+    "Skills":{
+      "title1":"PROGRAMMING SKILLS",
+      "title2":"LANGUAGES"
+    },
+    "Contact":{
+      "title":"Contact",
+      "email":"Email",
+      "phone":"Phone",
+      "name":"Name",
+      "message":"Message",
+      "send":"Send Email"
+    },
+    "Not-Found":{
+      "not":"It seems you have lost your way, try to go back where you came from."
+    },
+    "Footer":{
+      "copyright":" 2024 All Rights Reserved",
+      "developed":"Developed with love by Montagab"
+    }
+  }
