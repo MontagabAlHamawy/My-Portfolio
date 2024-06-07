@@ -11,16 +11,11 @@ import {
   PiBagSimpleBold,
   PiHourglass,
 } from "react-icons/pi";
-import { Roboto_Mono } from "next/font/google";
 import { useLocale, useTranslations } from "next-intl";
-import { usePathname } from "next/navigation";
-import { useTransition } from "react";
 
 export default function About() {
     const t = useTranslations("About");
     const localActive = useLocale();
-  const [isPending, setTransition] = useTransition();
-  const currentPath = usePathname();
   return (
     <motion.div
     initial="hidden"
