@@ -6,6 +6,8 @@ import { FormEvent, useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
+import { toast } from "react-toastify";
+
 
 export default function Contact() {
     const [status, setStatus] = useState<string>("");
@@ -26,7 +28,7 @@ export default function Contact() {
     const messageField = (document.getElementById("message") as HTMLTextAreaElement);
 
     if (!nameField.value || !emailField.value || !messageField.value) {
-      setStatus(`${t("please")}`);
+      toast.error(`${t("please")}`);
       return;
     }
 
@@ -39,10 +41,10 @@ export default function Contact() {
     try {
       await emailjs.sendForm(serviceID, templateID, event.target as HTMLFormElement);
       btn.value = "Send Email";
-      setStatus(`${t("sent")}`);
+      toast.success(`${t("sent")}`);
     } catch (error) {
       btn.value = "Send Email";
-      setStatus(JSON.stringify(error));
+      toast.error(JSON.stringify(error));
     }
   };
   
@@ -138,7 +140,7 @@ export default function Contact() {
             />
           </form>
   
-          {status && <div className={`mt-4 text-green-500 ${localActive === "ar" ? "rtl" : ""}`}>{status}</div>}
+          {/* {status && <div className={`mt-4 text-green-500 ${localActive === "ar" ? "rtl" : ""}`}>{status}</div>} */}
         </motion.div>
       </motion.div>
     );
