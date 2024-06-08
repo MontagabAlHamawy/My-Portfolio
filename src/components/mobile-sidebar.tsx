@@ -2,7 +2,6 @@
 
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
-
 import {
   PiHouse,
   PiUser,
@@ -12,19 +11,17 @@ import {
 } from "react-icons/pi";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { fadeIn } from "../utils/motion";
 import { usePathname } from "next/navigation";
 import LocalSwitcher from "./local-switcher";
-
 export const navData = [
-    { name: "Home", path: "/", icon: <PiHouse /> },
-    { name: "About", path: "/about", icon: <PiUser /> },
-    { name: "Projects", path: "/projects", icon: <PiProjectorScreenChart /> },
-    { name: "Skills", path: "/skills", icon: <PiCode /> },
+  { name: "Home", path: "/", icon: <PiHouse /> },
+  { name: "About", path: "/about", icon: <PiUser /> },
+  { name: "Projects", path: "/projects", icon: <PiProjectorScreenChart /> },
+  { name: "Skills", path: "/skills", icon: <PiCode /> },
   { name: "Contact", path: "/contact", icon: <PiPhone /> },
 ];
 
-export default function Sidebar() {
+export default function MobileSidebar() {
   const t = useTranslations("Index");
   const localActive = "/" + useLocale();
   const currentPath = usePathname();
@@ -45,7 +42,6 @@ export default function Sidebar() {
       viewport={{ once: true, amount: 0.1 }}
     >
       <motion.div
-        variants={fadeIn(statee, "tween", 0.1, 1)}
         className={`flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-[-1px]  mt-auto
      ${localActive === "/en" ? "left-0 xl:left-[2%]" : "right-0 xl:right-[2%]"}
       xl:right-[2%] z-50 top-0 w-full xl:w-16  xl:-max-w-md xl:h-screen`}
@@ -60,14 +56,26 @@ export default function Sidebar() {
                 key={index}
                 href={linked}
                 aria-label={link.name}
-                className={`flex gap-x-1 group hover:text-accent rounded-full ${  isActive?"" : "hover:bg-accent "}`}
+                className={`flex gap-x-1  rounded-full ${
+                  isActive ? "" : "hover:bg-accent"
+                }`}
               >
-                <div className={`absolute transition-all ${localActive === "/en" ? "pl-20 left-0" : "pr-20 right-0"}  hidden xl:group-hover:flex w-max`}>
+                <div
+                  className={`absolute transition-all ${
+                    localActive === "/en" ? "pl-20 left-0" : "pr-20 right-0"
+                  }  hidden xl:group-hover:flex w-max`}
+                >
                   <div className="bg-white/20 backdrop-blur-3xl hidden relative mt-[14px] xl:flex text-accent items-center p-[6px] rounded-[6px]">
                     <div className="text-[12px] leading-none hidden xl:block font-semibold capitalize ">
                       {link.name}
                     </div>
-                    <div className={`border-solid hidden xl:block  border-y-transparent border-y-[6px]  absolute  ${localActive === "/en" ? "border-r-white/20 border-r-8 border-l-0 -left-2" : "border-l-white/20 border-l-8 border-r-0 -right-2"}`}></div>
+                    <div
+                      className={`border-solid hidden xl:block  border-y-transparent border-y-[6px]  absolute  ${
+                        localActive === "/en"
+                          ? "border-r-white/20 border-r-8 border-l-0 -left-2"
+                          : "border-l-white/20 border-l-8 border-r-0 -right-2"
+                      }`}
+                    ></div>
                   </div>
                 </div>
                 <nav

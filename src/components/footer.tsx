@@ -1,15 +1,11 @@
-"use client";
+
 
 import { useLocale, useTranslations } from "next-intl";
-import { usePathname } from "next/navigation";
-import React, { useTransition } from "react";
 import { FaCopyright } from "react-icons/fa6";
 
 export default function Footer() {
   const t = useTranslations("Footer");
   const localActive = useLocale();
-  const [isPending, setTransition] = useTransition();
-  const currentPath = usePathname();
   return (
     <div className="static bottom-0 left-0">
       <div

@@ -3,7 +3,7 @@ import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { staggerContainer, fadeIn } from "@/utils/motion";
+import { fadeIn } from "@/utils/motion";
 import { usePathname } from "next/navigation";
 import { useTransition } from "react";
 
@@ -23,10 +23,10 @@ export default function Home() {
       viewport={{ once: false, amount: 0.1 }}
       className={` flex flex-col-reverse ${localActive === "en" ? "xl:flex-row" : "xl:flex-row-reverse"} justify-center xl:justify-between items-center mt-0 xl:pl-40 xl:pr-32 xl:h-[90vh] gap-y-10 gap-x-20`}
     >
-      <div className={`flex-1 flex justify-center ${localActive === "en" ? "items-start" : "items-end"} gap-y-5 flex-col px-4 xl:px-0 mb-44 xl:mb-0 xl:pl-0 text-white/80 text-xl xl:text-lg font-extralight`}>
+      <div className={`flex-1 flex justify-center ${localActive === "en" ? "items-start" : "items-end"} gap-y-5 flex-col px-4 xl:px-0 mb-10 xl:mb-0 xl:pl-0 text-white/80 text-xl xl:text-lg font-extralight`}>
         <motion.h1
           variants={fadeIn("up", "tween", 0.2, 1)}
-          className={`text-2xl w-full xl:text-4xl ${localActive === "ar" ? "rtl" : ""} text-white font-500 uppercase  `}
+          className={`text-3xl w-full xl:text-4xl ${localActive === "ar" ? "rtl" : ""} text-accent font-500 uppercase  `}
         >
           {t("job")}
         </motion.h1>

@@ -66,7 +66,7 @@ export default function Contact() {
       <div className="mt-[-20px] xl:mt-20 mb-4 xl:mb-10">
         <motion.h1
           variants={fadeIn("down", "tween", 0.2, 1)}
-          className={`text-2xl text-white font-extralight uppercase`}
+          className={`text-3xl text-accent font-extralight uppercase`}
         >
           {t("title")}
         </motion.h1>

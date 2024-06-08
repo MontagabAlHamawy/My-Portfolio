@@ -3,13 +3,14 @@ import { Inter, Roboto_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import Header from "@/components/header";
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 import "./globals.css";
 import Sidebar from "@/components/sidebar";
 import Footer from "@/components/footer";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import MobileSidebar from "@/components/mobile-sidebar";
 
 // const inter = Inter({ subsets: ["latin"] });
 const inter = Roboto_Mono({ subsets: ["latin"] });
@@ -36,8 +37,13 @@ export default async function LocaleLayout({
       <body>
         <NextIntlClientProvider messages={messages}>
           <Header />
-          <Sidebar />
-          <ToastContainer theme="dark"/>
+          <div className="hidden xl:block">
+            <Sidebar />
+          </div>
+          <div className="block xl:hidden">
+            <MobileSidebar />
+          </div>
+          <ToastContainer theme="dark" />
           <div className="wrapper min-h-[77.1vh] xl:min-h-[80vh] pt-40 xl:pt-0">
             {children}
             <Analytics />

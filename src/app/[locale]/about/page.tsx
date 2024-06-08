@@ -26,7 +26,7 @@ export default function About() {
     <div className={`flex gap-y-5 xl:gap-y-10 flex-col ${localActive === "en" ? "items-start" : "items-start rtl"} pt-7 xl:pt-36 pb-10 xl:pb-20 px-4 xl:px-0 font-extralight`}>
       <motion.h1
         variants={fadeIn("up", "tween", 0.1, 1)}
-        className={`text-2xl xl:text-4xl text-white font-500 uppercase`}
+        className={`text-3xl xl:text-4xl text-accent font-500 uppercase`}
       >
         {t("title")}
       </motion.h1>
@@ -60,7 +60,7 @@ export default function About() {
           <nav className="flex justify-center items-center gap-x-1">
             <PiUser className="text-accent text-3xl mr-2 rounded-full p-1 bg-white/10" />
             <p className="font-light text-white/70">{t("namen")}:</p>
-            <span className="text-accent font-bold xl:text-sm">
+            <span className="text-accent font-bold  xl:text-sm">
             {t("name")}
             </span>
           </nav>
@@ -108,9 +108,9 @@ export default function About() {
     </div>
     <motion.div
       variants={fadeIn("down", "tween", 0.6, 1)}
-      className="xl:container pl-0 flex justify-center items-center w-full mr-0 pt-0 xl:pt-48 pb-10 xl:pb-20  xl:mr-[-50px]"
+      className="xl:container pl-0 flex justify-center items-center w-full mr-0 pt-0 xl:pt-48 xl:pb-20  xl:mr-[-50px]"
     >
-      <div className="bg-accent shadow-sm pb-10 pt-10 flex items-center justify-center rounded-tl-full rounded-br-full  mx-auto">
+      <div className="bg-accent shadow-sm xl:pb-10 pt-10 flex items-center justify-center rounded-tl-full rounded-br-full  mx-auto">
         <Image
           src={"/About.jpg"}
           width={300}

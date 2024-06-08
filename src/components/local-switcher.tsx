@@ -5,12 +5,12 @@ import { usePathname } from "next/navigation";
 import React, { useTransition } from "react";
 import { useLocale } from "use-intl";
 
+
 export default function LocalSwitcher() {
   const router = useRouter();
   const localActive = useLocale();
   const [isPending, setTransition] = useTransition();
   const currentPath = usePathname();
-
   const localePath = currentPath.substring(
     currentPath.indexOf(localActive) + localActive.length + 1
   );
@@ -28,7 +28,7 @@ export default function LocalSwitcher() {
       <button
          onClick={toggleLocale}
          disabled={isPending}
-        className="flex gap-x-5 group hover:text-accent"
+        className="flex gap-x-5 group hover:bg-accent hover:text-white rounded-full"
       >
         <div className={`absolute transition-all ${localActive === "en" ? "pl-20 left-0" : "pr-20 right-0"} hidden xl:group-hover:flex w-max`}>
           <div className="bg-white/20 backdrop-blur-3xl hidden relative mt-[14px] xl:flex text-accent items-center p-[6px] rounded-[6px]">
@@ -39,7 +39,7 @@ export default function LocalSwitcher() {
           </div>
         </div>
         <nav
-          className="text-accent  xl:mb-0 bg-body text-xl xl:text-xl hover:text-accentv rounded-full p-4 py-3 cursor-pointer transition-all hover:text-accent"
+          className="text-white  xl:mb-0 font-thin text-xl xl:text-xl hover:text-accentv rounded-full px-4 py-3 cursor-pointer transition-all"
         >
           {localActive === "en" ? "Ar" : "En"}
         </nav>

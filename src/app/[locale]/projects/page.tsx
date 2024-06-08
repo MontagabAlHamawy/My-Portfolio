@@ -5,7 +5,7 @@ import { PiCode, PiEye } from "react-icons/pi";
 import { MProjects } from "@/components/links";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { staggerContainer, fadeIn } from "@/utils/motion";
+import { fadeIn } from "@/utils/motion";
 
 import { useTranslations } from "next-intl";
 
@@ -25,7 +25,7 @@ export default function Projects() {
         variants={fadeIn("down", "tween", 0.2, 1)}
         className="text-center"
       >
-        <h1 className={`font-500 mt-10 text-2xl text-white font-extralight uppercase`}>
+        <h1 className={`font-500 mt-10 text-3xl text-accent font-extralight uppercase`}>
           {t("title")}
         </h1>
       </motion.div>

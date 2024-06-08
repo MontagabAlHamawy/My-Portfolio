@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { staggerContainer, fadeIn } from "@/utils/motion";
+import { fadeIn } from "@/utils/motion";
 import { ProgramS, Languages } from "@/components/links";
 import { useTranslations } from "next-intl";
 
@@ -17,7 +17,7 @@ export default function Skills() {
       <div className="xl:mt-10">
         <motion.h1
           variants={fadeIn("down", "tween", 0.2, 1)}
-          className={`text-2xl text-white font-extralight uppercase `}
+          className={`text-3xl text-accent font-extralight uppercase `}
         >
           {t("title1")}
         </motion.h1>
@@ -56,7 +56,7 @@ export default function Skills() {
         })}
       </div>
       <motion.div variants={fadeIn("down", "tween", 0.1, 1)} className="mt-20">
-        <h1 className={`text-2xl text-white font-extralight uppercase`}>
+        <h1 className={`text-3xl text-accent font-extralight uppercase`}>
           {t("title2")}
         </h1>
       </motion.div>

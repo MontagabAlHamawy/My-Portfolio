@@ -1,9 +1,8 @@
 "use client";
 
-import Error from "next/error";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { staggerContainer, fadeIn } from "@/utils/motion";
+import {  fadeIn } from "@/utils/motion";
 import { useLocale, useTranslations } from "next-intl";
 import { useTransition } from "react";
 import { usePathname } from "next/navigation";

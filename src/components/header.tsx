@@ -1,10 +1,8 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { staggerContainer, fadeIn } from "@/utils/motion"
+import { fadeIn } from "@/utils/motion"
 import Link from "next/link";
 import {
   PiFacebookLogo,
