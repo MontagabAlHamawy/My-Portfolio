@@ -5,6 +5,7 @@ import { getMessages } from "next-intl/server";
 import Header from "@/components/header";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import { FlagsReporter } from '@/vercel/flags/react';
 import "./globals.css";
 import Sidebar from "@/components/sidebar";
 import Footer from "@/components/footer";
@@ -49,6 +50,7 @@ export default async function LocaleLayout({
           <ToastContainer theme="dark" />
           <div className="wrapper min-h-[77.1vh] xl:min-h-[80vh] pt-40 xl:pt-0">
             {children}
+            <FlagsReporter keys={['summer-sale', 'instant-checkout']} />
             <Analytics />
             <SpeedInsights />
           </div>
