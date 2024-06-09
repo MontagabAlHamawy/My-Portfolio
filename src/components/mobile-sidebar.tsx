@@ -36,17 +36,12 @@ export default function MobileSidebar() {
 
   return (
     <motion.div
-      // variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.1 }}
     >
-      <motion.div
-        className={`flex flex-col items-center xl:justify-center gap-y-4 fixed xl:h-max bottom-0  mt-auto
-     ${localActive === "/en" ? "left-0 xl:left-[2%]" : "right-0 xl:right-[2%]"}
-      xl:right-[2%] z-50 top-0 w-full xl:w-16  xl:-max-w-md xl:h-screen`}
-      >
-        <div className="flex w-full xl:flex-col items-center justify-center xl:justify-center fixed bottom-0 left-0 gap-y-1 px-0 md:px-40 xl:px-0 h-[70px] xl:h-max py-8 bg-white/10  backdrop-blur-3xl text-3xl xl:text-md rounded-tl-xl rounded-tr-xl xl:rounded-full ">
+      <motion.div>
+        <div className="flex w-full xl:flex-col items-center justify-center z-30 xl:justify-center  fixed bottom-0 left-0 gap-y-1 px-0 md:px-40 xl:px-0 h-[70px] xl:h-max py-8 bg-white/10  backdrop-blur-3xl text-3xl xl:text-md rounded-tl-xl rounded-tr-xl xl:rounded-full ">
           {navData.map((link, index) => {
             const isActive = localePath === link.path;
             const linked = localActive + link.path;
