@@ -7,7 +7,7 @@ export default function Footer() {
   const t = useTranslations("Footer");
   const localActive = useLocale();
   return (
-    <div className="static bottom-0 left-0">
+    <div className="static bottom-[-1px] left-0">
       <div
         className={`flex flex-col  ${
           localActive === "en" ? "xl:flex-row" : "xl:flex-row-reverse"

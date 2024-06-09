@@ -46,7 +46,7 @@ export default function LocalSwitcher() {
             ></div>
           </div>
         </div>
-        <nav className="text-white  xl:mb-0 font-thin text-xl xl:text-xl hover:text-accentv rounded-full px-4 py-3 cursor-pointer transition-all">
+        <nav className="text-white  xl:mb-0 font-thin text-2xl xl:text-xl hover:text-accentv rounded-full px-4 py-3 cursor-pointer transition-all">
           {localActive === "en" ? "Ar" : "En"}
         </nav>
       </button>
