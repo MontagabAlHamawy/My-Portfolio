@@ -9,11 +9,9 @@ import { fadeIn } from "@/utils/motion";
 
 import { useTranslations } from "next-intl";
 
-
-
 export default function Projects() {
-    const t = useTranslations("Projects");
-    const [filterType, setFilterType] = useState("all");
+  const t = useTranslations("Projects");
+  const [filterType, setFilterType] = useState("all");
   return (
     <motion.div
       initial="hidden"
@@ -25,7 +23,9 @@ export default function Projects() {
         variants={fadeIn("down", "tween", 0.2, 1)}
         className="text-center"
       >
-        <h1 className={`font-500 mt-10 text-3xl text-accent font-extralight uppercase`}>
+        <h1
+          className={`font-500 mt-10 text-3xl text-accent font-extralight uppercase`}
+        >
           {t("title")}
         </h1>
       </motion.div>
@@ -99,15 +99,15 @@ export default function Projects() {
             <div className="flex justify-center items-center z-10 gap-5 xl:gap-10 absolute top-[30%] xl:top-[30%]">
               <Link
                 href={dd.code}
-                className="border-accent border-solid border-[2px] p-2 rounded-full hover:bg-black/30 hidden group-hover:block transition-all"
+                className="border-body hover:border-accent text-white hover:text-accent border-solid border-[3px] p-2 rounded-full bg-body   hidden group-hover:block transition-all"
               >
-                <PiCode className="text-accent font-black text-2xl" />
+                <PiCode className=" font-black text-2xl " />
               </Link>
               <Link
                 href={dd.URL}
-                className="border-accent border-solid border-[2px] p-2 rounded-full hover:bg-black/30 hidden group-hover:block transition-all"
+                className="border-body hover:border-accent text-white hover:text-accent border-solid border-[3px] p-2 rounded-full bg-body   hidden group-hover:block transition-all"
               >
-                <PiEye className="text-accent font-black text-2xl" />
+                <PiEye className="font-black text-2xl" />
               </Link>
             </div>
             <p className="mt-2 text-white/80 font-extralight text-xl xl:text-lg ">
@@ -117,5 +117,5 @@ export default function Projects() {
         ))}
       </motion.div>
     </motion.div>
-  )
+  );
 }

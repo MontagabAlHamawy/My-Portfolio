@@ -4,38 +4,40 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import {  fadeIn } from "@/utils/motion";
 import { useLocale, useTranslations } from "next-intl";
-import { useTransition } from "react";
-import { usePathname } from "next/navigation";
 import Image from "next/image";
 
 export default function NotFound() {
   const t = useTranslations("Not-Found");
   const localActive = useLocale();
-  const [isPending, setTransition] = useTransition();
-  const currentPath = usePathname();
   return (
     <motion.div
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.1 }}
-      className={`w-full xl:h-[78.4vh] mt-20 flex ${localActive === "ar" ? "flex-col xl:flex-row" : "flex-col xl:flex-row-reverse"} justify-center items-center`}
+      className={`w-full xl:h-[78.4vh] gap-5 mt-20 flex flex-col justify-center items-center`}
     >
       <motion.div variants={fadeIn("down", "tween", 0.1, 1)}>
         <Image
-          src={"/404.png"}
-          width={700}
-          height={0}
+          src={"/error.png"}
+          width={500}
+          height={400}
           alt="404"
-          className=" md:mt-[-50px] ml-[-10px]"
+          className="mt-[-120px] md:mt-[-100px] ml-[-10px] mb-[-100px]  xl:mb-0"
         />
       </motion.div>
 
-      <div className={`${localActive === "ar" ? " xl:mr-80" : " xl:ml-80"} mt-28 mb-10 xl:mt-0 flex flex-col justify-center xl:justify-start items-center`}>
+      <div className={` mt-28 mb-10 xl:mt-0 flex flex-col justify-center xl:justify-start items-center`}>
         <motion.span
           variants={fadeIn("up", "tween", 0.2, 1)}
-          className={`text-accent text-xl text-center ${localActive === "ar" ? "rtl " : ""} md:text-2xl xl:text-2xl font-normal mt-[-50px] md:mt-[-100px] xl:mt-[-100px]`}
+          className={`text-accent text-xl text-center  md:text-2xl xl:text-2xl font-normal mt-[-70px] xl:mt-[-90px]`}
         >
-          {t("not")}
+          {t("not1")}
+        </motion.span>
+        <motion.span
+          variants={fadeIn("up", "tween", 0.2, 1)}
+          className={`text-accent text-xl text-center  md:text-2xl xl:text-2xl font-normal mt-5`}
+        >
+          {t("not2")}
         </motion.span>
 
         <Link

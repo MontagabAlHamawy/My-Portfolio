@@ -4,15 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
-import { usePathname } from "next/navigation";
-import { useTransition } from "react";
 
 
 export default function Home() {
   const t = useTranslations("Home");
   const localActive = useLocale();
-  const [isPending, setTransition] = useTransition();
-  const currentPath = usePathname();
   const linked = localActive + "/about";
 
 

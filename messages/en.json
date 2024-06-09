@@ -36,18 +36,20 @@
       "title2":"LANGUAGES"
     },
     "Contact":{
-      "title":"Contact",
+      "title":"Contact us",
       "email":"Email",
       "phone":"Phone",
       "name":"Name",
       "message":"Message",
       "send":"Send Email",
-      "please":"Please fill out all fields",
+      "please":"Please fill out all fields 😒",
       "sending":"Sending...",
-      "sent":"Sent!"
+      "sent":"Sent 😍",
+      "error":"Failed to send 😢"
     },
     "Not-Found":{
-      "not":"It seems you have lost your way, try to go back where you came from."
+      "not1":"It seems you have lost your way",
+      "not2":"try to go back where you came from"
     },
     "Footer":{
       "copyright":" 2024 All Rights Reserved",

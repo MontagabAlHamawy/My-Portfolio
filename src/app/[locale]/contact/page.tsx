@@ -1,27 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { staggerContainer, fadeIn } from "@/utils/motion";
-import { FormEvent, useEffect, useState } from "react";
+import { fadeIn } from "@/utils/motion";
+import { FormEvent, useEffect } from "react";
 import emailjs from "emailjs-com";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { toast } from "react-toastify";
 
 export default function Contact() {
-  const [status, setStatus] = useState<string>("");
   const t = useTranslations("Contact");
   const localActive = useLocale();
 
   useEffect(() => {
-    // Initialize EmailJS with your User ID
     emailjs.init("E3kZsQH8AGosAgdNy");
   }, []);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
-    // Check if any of the fields are empty
     const nameField = document.getElementById("from_name") as HTMLInputElement;
     const emailField = document.getElementById("email_id") as HTMLInputElement;
     const messageField = document.getElementById(
@@ -29,13 +25,12 @@ export default function Contact() {
     ) as HTMLTextAreaElement;
 
     if (!nameField.value || !emailField.value || !messageField.value) {
-      toast.error(`${t("please")}`);
+      toast.info(`${t("please")}`);
       return;
     }
 
     const btn = document.getElementById("button") as HTMLInputElement;
     btn.value = `${t("sending")}`;
-
     const serviceID = "default_service";
     const templateID = "template_gzusr0o";
 
@@ -52,7 +47,7 @@ export default function Contact() {
       messageField.value = "";
     } catch (error) {
       btn.value = "Send Email";
-      toast.error(JSON.stringify(error));
+      toast.error(`${t("error")}`);
     }
   };
 
@@ -77,9 +72,9 @@ export default function Contact() {
           className="flex flex-col justify-center items-center bg-white/10 rounded-md px-6 py-10 min-w-[310px]"
         >
           <h1 className="text-accent font-bold text-lg">{t("email")}</h1>
-          <Link href={"mailto:montagab@klinder-design.com"}>
+          <Link href={"mailto:montagabalh@gmail.com"}>
             <p className="text-white font-extralight mt-1">
-              Montagab@klinder-design.com
+              montagabalh@gmail.com
             </p>
           </Link>
         </motion.div>
@@ -151,8 +146,6 @@ export default function Contact() {
             className="bg-accent inline-grid font-light text-white py-2 px-4 rounded cursor-pointer"
           />
         </form>
-
-        {/* {status && <div className={`mt-4 text-green-500 ${localActive === "ar" ? "rtl" : ""}`}>{status}</div>} */}
       </motion.div>
     </motion.div>
   );

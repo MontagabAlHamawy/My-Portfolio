@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Roboto_Mono } from "next/font/google";
-import { NextIntlClientProvider } from "next-intl";
+import { Cairo, Roboto_Mono } from "next/font/google";
+import { NextIntlClientProvider, useLocale } from "next-intl";
 import { getMessages } from "next-intl/server";
 import Header from "@/components/header";
 import "react-toastify/dist/ReactToastify.css";
@@ -13,7 +13,10 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import MobileSidebar from "@/components/mobile-sidebar";
 
 // const inter = Inter({ subsets: ["latin"] });
-const inter = Roboto_Mono({ subsets: ["latin"] });
+// const roboto = Roboto_Mono({ subsets: ["latin"] });
+const cairo = Cairo({
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Montagab - Home",
@@ -32,7 +35,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={cairo.className}>
       <link rel="icon" href="@/favicon.ico" sizes="any" />
       <body>
         <NextIntlClientProvider messages={messages}>

@@ -17,10 +17,10 @@ import { usePathname } from "next/navigation";
 import LocalSwitcher from "./local-switcher";
 
 export const navData = [
-    { name: "Home", path: "/", icon: <PiHouse /> },
-    { name: "About", path: "/about", icon: <PiUser /> },
-    { name: "Projects", path: "/projects", icon: <PiProjectorScreenChart /> },
-    { name: "Skills", path: "/skills", icon: <PiCode /> },
+  { name: "Home", path: "/", icon: <PiHouse /> },
+  { name: "About", path: "/about", icon: <PiUser /> },
+  { name: "Projects", path: "/projects", icon: <PiProjectorScreenChart /> },
+  { name: "Skills", path: "/skills", icon: <PiCode /> },
   { name: "Contact", path: "/contact", icon: <PiPhone /> },
 ];
 
@@ -39,7 +39,6 @@ export default function Sidebar() {
 
   return (
     <motion.div
-      // variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.1 }}
@@ -60,14 +59,26 @@ export default function Sidebar() {
                 key={index}
                 href={linked}
                 aria-label={link.name}
-                className={`flex gap-x-1 group hover:text-accent rounded-full ${  isActive?"" : "hover:bg-accent "}`}
+                className={`flex gap-x-1 group hover:text-accent rounded-full ${
+                  isActive ? "" : "hover:bg-accent "
+                }`}
               >
-                <div className={`absolute transition-all ${localActive === "/en" ? "pl-20 left-0" : "pr-20 right-0"}  hidden xl:group-hover:flex w-max`}>
+                <div
+                  className={`absolute transition-all ${
+                    localActive === "/en" ? "pl-20 left-0" : "pr-20 right-0"
+                  }  hidden xl:group-hover:flex w-max`}
+                >
                   <div className="bg-white/20 backdrop-blur-3xl hidden relative mt-[14px] xl:flex text-accent items-center p-[6px] rounded-[6px]">
                     <div className="text-[12px] leading-none hidden xl:block font-semibold capitalize ">
                       {link.name}
                     </div>
-                    <div className={`border-solid hidden xl:block  border-y-transparent border-y-[6px]  absolute  ${localActive === "/en" ? "border-r-white/20 border-r-8 border-l-0 -left-2" : "border-l-white/20 border-l-8 border-r-0 -right-2"}`}></div>
+                    <div
+                      className={`border-solid hidden xl:block  border-y-transparent border-y-[6px]  absolute  ${
+                        localActive === "/en"
+                          ? "border-r-white/20 border-r-8 border-l-0 -left-2"
+                          : "border-l-white/20 border-l-8 border-r-0 -right-2"
+                      }`}
+                    ></div>
                   </div>
                 </div>
                 <nav

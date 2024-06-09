@@ -42,9 +42,6 @@ export default function Skills() {
                     <span className="relative font-bold text-white transition-all hover:text-accent text-4xl">
                       {link.icon}
                     </span>
-                    {/* <p className="text-base font-medium absolute bottom-[6px]">
-                      {link.Experience}%
-                    </p> */}
                     <p className="text-base font-extralight text-white/80 mr-[-10px]  ml-[-10px] absolute -bottom-10 ">
                       {link.name}
                     </p>
@@ -80,9 +77,6 @@ export default function Skills() {
                     <div className="relative  font-bold text-white hover:text-accent text-2xl  xl:text-3xl">
                       {link.icon}
                     </div>
-                    {/* <span className="text-base font-medium absolute bottom-[6px]">
-                      {link.Experience}%
-                    </span> */}
                     <p className="text-base font-extralight text-white/80 absolute -bottom-10">
                       {link.name}
                     </p>
