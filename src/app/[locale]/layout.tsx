@@ -5,7 +5,7 @@ import { getMessages } from "next-intl/server";
 import Header from "@/components/header";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
-import { FlagsReporter } from '@/vercel/flags/react';
+import { FlagsReporter } from '@vercel/flags/react';
 import "./globals.css";
 import Sidebar from "@/components/sidebar";
 import Footer from "@/components/footer";
