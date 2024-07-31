@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://montagab.vercel.app
+
+# Sitemaps
+Sitemap: https://montagab.vercel.app/sitemap.xml
