@@ -31,8 +31,8 @@ export default function Contact() {
 
     const btn = document.getElementById("button") as HTMLInputElement;
     btn.value = `${t("sending")}`;
-    const serviceID = "default_service";
-    const templateID = "template_gzusr0o";
+    const serviceID = 'default_service';
+    const templateID = 'template_gzusr0o';
 
     try {
       await emailjs.sendForm(
