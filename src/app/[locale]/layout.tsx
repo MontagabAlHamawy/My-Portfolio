@@ -12,6 +12,7 @@ import Footer from "@/components/footer";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import MobileSidebar from "@/components/mobile-sidebar";
+import Script from 'next/script';
 
 // const inter = Inter({ subsets: ["latin"] });
 // const roboto = Roboto_Mono({ subsets: ["latin"] });
@@ -56,6 +57,22 @@ export default async function LocaleLayout({
           </div>
           <Footer />
         </NextIntlClientProvider>
+         <Script id="custom-stack-analytix" strategy="afterInteractive">
+                {`
+                    (function (s, t, a, c, k) {
+                        t.src = t.src;
+                        var d = document.createElement('script');
+                        for (var attr in t) {
+                            d.setAttribute(attr, t[attr] ? t[attr] : null);
+                        }
+                        d.innerHTML = a;
+                        d.onload = function () {
+                            new StackAnalytix("" + c, "" + k).Start();
+                        };
+                        document.body.appendChild(d);
+                    })(32, { src: 'https://api.stkeg-cdn.com/v1/tracking/pixel', type: 'text/javascript', async: null }, '', 6, 265);
+                `}
+            </Script>
       </body>
     </html>
   );
