@@ -73,6 +73,19 @@ export default async function LocaleLayout({
                     })(32, { src: 'https://api.stkeg-cdn.com/v1/tracking/pixel', type: 'text/javascript', async: null }, '', 6, 265);
                 `}
             </Script>
+
+         <Script id="custom-stack-analytix" strategy="afterInteractive">
+           {
+             `(function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:5186634,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+           `}
+            </Script>
       </body>
     </html>
   );
