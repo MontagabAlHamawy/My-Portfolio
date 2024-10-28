@@ -57,7 +57,7 @@ export default async function LocaleLayout({
           </div>
           <Footer />
         </NextIntlClientProvider>
-         <Script id="custom-stack-analytix" strategy="afterInteractive">
+{/*          <Script id="custom-stack-analytix" strategy="afterInteractive">
                 {`
                     (function (s, t, a, c, k) {
                         t.src = t.src;
@@ -72,7 +72,7 @@ export default async function LocaleLayout({
                         document.body.appendChild(d);
                     })(32, { src: 'https://api.stkeg-cdn.com/v1/tracking/pixel', type: 'text/javascript', async: null }, '', 6, 265);
                 `}
-            </Script>
+            </Script> */}
 
          <Script id="custom-stack-analytix" strategy="afterInteractive">
            {
