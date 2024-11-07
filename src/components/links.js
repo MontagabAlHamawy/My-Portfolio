@@ -12,6 +12,13 @@ import { PiFacebookLogo, PiGithubLogo, PiInstagramLogo, PiLinkedinLogo, PiTelegr
 import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
 
 export const MProjects = [
+   {
+    name: "Qubefyn",
+    Type: "next",
+    image: "/projects/qubefyn.jpg",
+    URL: "https://www.qubefyn.com/",
+    code: "https://www.qubefyn.com/",
+  },
   {
     name: "3aqarat",
     Type: "next",
