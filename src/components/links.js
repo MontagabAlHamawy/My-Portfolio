@@ -27,6 +27,13 @@ export const MProjects = [
     code: "https://github.com/MontagabAlHamawy/3aqarat",
   },
   {
+    name: "MR-Order",
+    Type: "next",
+    image: "/projects/MR-Order.jpg",
+    URL: "https://mr-order.vercel.app/",
+    code: "https://github.com/MontagabAlHamawy/MR-Order",
+  },
+  {
     name: "DR-Needs",
     Type: "wordpress",
     image: "/projects/dr-needs.png",
