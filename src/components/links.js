@@ -72,7 +72,7 @@ export const MProjects = [
     name: "Metaverse",
     Type: "next",
     image: "/projects/metaverse.png",
-    URL: "https://metaverse.klinder-design.com/",
+    URL: "https://metaverse-mo.vercel.app/",
     code: "https://github.com/MontagabAlHamawy/Metaverse",
   },
   {
