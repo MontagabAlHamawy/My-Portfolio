@@ -31,7 +31,7 @@ export default function Contact() {
 
     const btn = document.getElementById("button") as HTMLInputElement;
     btn.value = `${t("sending")}`;
-    const serviceID = 'default_service';
+    const serviceID = 'service_w4qu8fi';
     const templateID = 'template_gzusr0o';
 
     try {
