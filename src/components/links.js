@@ -13,6 +13,13 @@ import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
 
 export const MProjects = [
    {
+    name: "Shop",
+    Type: "next",
+    image: "/projects/shop.jpg",
+    URL: "https://glam-wear.vercel.app/",
+    code: "https://glam-wear.vercel.app/",
+  },
+  {
     name: "Fashion",
     Type: "wordpress",
     image: "/projects/fashion.png",
