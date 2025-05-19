@@ -5,14 +5,22 @@ import {
   FaCss3,
   FaReact,
   FaSquareJs,
+  FaVuejs,
   FaWordpress,
   FaGit,
 } from "react-icons/fa6";
 import { PiFacebookLogo, PiGithubLogo, PiInstagramLogo, PiLinkedinLogo, PiTelegramLogo } from "react-icons/pi";
-import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss , SiNuxtdotjs } from "react-icons/si";
 
 export const MProjects = [
    {
+    name: "Nuxt Project",
+    Type: "nuxt",
+    image: "/projects/nuxt.png",
+    URL: "https://nuxt-pro.vercel.app/",
+    code: "https://nuxt-pro.vercel.app/",
+  },
+  {
     name: "Shop",
     Type: "next",
     image: "/projects/shop.jpg",
@@ -133,6 +141,8 @@ export const ProgramS = [
   { name: "TS", Experience: 25, icon: <BiLogoTypescript /> },
   { name: "React", Experience: 20, icon: <FaReact /> },
   { name: "Next.js", Experience: 35, icon: <SiNextdotjs /> },
+  { name: "Vue", Experience: 50, icon: <FaVuejs /> },
+  { name: "Nuxt.js", Experience: 45, icon: <SiNuxtdotjs /> },
   { name: "Bootstrap", Experience: 55, icon: <FaBootstrap /> },
   { name: "Tailwind", Experience: 67, icon: <SiTailwindcss /> },
   { name: "WordPress", Experience: 40, icon: <FaWordpress /> },
