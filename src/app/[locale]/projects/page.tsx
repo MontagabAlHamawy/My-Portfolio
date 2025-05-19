@@ -31,7 +31,7 @@ export default function Projects() {
       </motion.div>
       <motion.div
         variants={fadeIn("down", "tween", 0.4, 1)}
-        className="grid grid-cols-2 xl:grid-cols-5 gap-x-9 gap-y-2 px-3 xl:px-0 xl:gap-x-6 xl:text-xl"
+        className="flex flex-wrap justify-center items-center gap-x-9 gap-y-2 px-3 xl:px-0 xl:gap-x-6 xl:text-xl"
       >
         <p
           className={`text-accent text-lg flex justify-center cursor-pointer hover:bg-white/10 transition-all px-3 xl:px-4 py-1 rounded-lg font-light ${
@@ -64,6 +64,14 @@ export default function Projects() {
           onClick={() => setFilterType("react")}
         >
           React
+        </p>
+        <p
+          className={`text-accent text-lg flex justify-center cursor-pointer hover:bg-white/10 transition-all px-3 xl:px-4 py-1 rounded-lg font-light ${
+            filterType === "nuxt" && "font-bold bg-white/10"
+          }`}
+          onClick={() => setFilterType("nuxt")}
+        >
+          Nuxt.js
         </p>
         <p
           className={`text-accent text-lg flex justify-center cursor-pointer hover:bg-white/10 transition-all px-3 xl:px-4 py-1 rounded-lg font-light ${
