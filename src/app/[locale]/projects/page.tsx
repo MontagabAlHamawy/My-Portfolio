@@ -55,7 +55,7 @@ export default function Projects() {
           }`}
           onClick={() => setFilterType("next")}
         >
-          Next
+          Next.js
         </p>
         <p
           className={`text-accent text-lg flex justify-center cursor-pointer hover:bg-white/10 transition-all px-3 xl:px-4 py-1 rounded-lg font-light ${
