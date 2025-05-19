@@ -10,7 +10,7 @@ import {
   FaGit,
 } from "react-icons/fa6";
 import { PiFacebookLogo, PiGithubLogo, PiInstagramLogo, PiLinkedinLogo, PiTelegramLogo } from "react-icons/pi";
-import { SiNextdotjs, SiTailwindcss , SiNuxtdotjs } from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss , SiNuxtdotjs , SiPrisma  } from "react-icons/si";
 
 export const MProjects = [
    {
@@ -141,11 +141,12 @@ export const ProgramS = [
   { name: "TS", Experience: 25, icon: <BiLogoTypescript /> },
   { name: "React", Experience: 20, icon: <FaReact /> },
   { name: "Next.js", Experience: 35, icon: <SiNextdotjs /> },
-  { name: "Vue", Experience: 50, icon: <FaVuejs /> },
-  { name: "Nuxt.js", Experience: 45, icon: <SiNuxtdotjs /> },
+  { name: "Vue", Experience: 3, icon: <FaVuejs /> },
+  { name: "Nuxt.js", Experience: 10, icon: <SiNuxtdotjs /> },
   { name: "Bootstrap", Experience: 55, icon: <FaBootstrap /> },
   { name: "Tailwind", Experience: 67, icon: <SiTailwindcss /> },
   { name: "WordPress", Experience: 40, icon: <FaWordpress /> },
+  { name: "Prisma ORM", Experience: 20, icon: <SiPrisma /> },
   { name: "Git", Experience: 53, icon: <FaGit /> },
 ];
 export const Languages = [
