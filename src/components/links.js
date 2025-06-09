@@ -12,6 +12,27 @@ import {
 import { PiFacebookLogo, PiGithubLogo, PiInstagramLogo, PiLinkedinLogo, PiTelegramLogo } from "react-icons/pi";
 import { SiNextdotjs, SiTailwindcss , SiNuxtdotjs , SiPrisma  } from "react-icons/si";
 
+  // {
+  //   name: "DR-Needs",
+  //   Type: "wordpress",
+  //   image: "/projects/dr-needs.png",
+  //   URL: "https://dr-needs.com/",
+  //   code: "https://dr-needs.com/",
+  // },
+  // {
+  //   name: "Dwana",
+  //   Type: "wordpress",
+  //   image: "/projects/dwana.png",
+  //   URL: "https://dwana.net/",
+  //   code: "https://dwana.net/",
+  // },
+  // {
+  //   name: "Klinder-Design",
+  //   Type: "wordpress",
+  //   image: "/projects/klinder-design.png",
+  //   URL: "https://klinder-design.com/",
+  //   code: "https://klinder-design.com/",
+  // },
 export const MProjects = [
    {
     name: "Nuxt Project",
@@ -61,27 +82,6 @@ export const MProjects = [
     image: "/projects/MR-Order.jpg",
     URL: "https://mr-order.vercel.app/",
     code: "https://github.com/MontagabAlHamawy/MR-Order",
-  },
-  {
-    name: "DR-Needs",
-    Type: "wordpress",
-    image: "/projects/dr-needs.png",
-    URL: "https://dr-needs.com/",
-    code: "https://dr-needs.com/",
-  },
-  {
-    name: "Dwana",
-    Type: "wordpress",
-    image: "/projects/dwana.png",
-    URL: "https://dwana.net/",
-    code: "https://dwana.net/",
-  },
-  {
-    name: "Klinder-Design",
-    Type: "wordpress",
-    image: "/projects/klinder-design.png",
-    URL: "https://klinder-design.com/",
-    code: "https://klinder-design.com/",
   },
   {
     name: "Metaverse",
