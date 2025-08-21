@@ -35,6 +35,13 @@ import { SiNextdotjs, SiTailwindcss , SiNuxtdotjs , SiPrisma  } from "react-icon
   // },
 export const MProjects = [
    {
+    name: "Cleaning Company",
+    Type: "wordpress",
+    image: "/projects/cleaning.png",
+    URL: "https://reinigungshelferberlin.com/",
+    code: "https://reinigungshelferberlin.com/",
+  },
+  {
     name: "Nuxt Project",
     Type: "nuxt",
     image: "/projects/nuxt.png",
