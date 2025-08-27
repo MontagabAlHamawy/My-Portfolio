@@ -65,10 +65,10 @@ export default function About() {
             className="text-white/80 font-500 text-xl xl:text-lg"
           >
           <h1 className="text-lg font-bold text-accent">{t("title1")}</h1>
-            <p>- {t("t1")}</p>
-            <p>- {t("t2")}</p>
-            <p>- {t("t3")}</p>
-            <p>- {t("t4")}</p>
+            <p className="text-white">- {t("t1")}</p>
+            <p className="text-white">- {t("t2")}</p>
+            <p className="text-white">- {t("t3")}</p>
+            <p className="text-white">- {t("t4")}</p>
           </motion.div>
           <br />
           <motion.p
