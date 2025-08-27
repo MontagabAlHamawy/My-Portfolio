@@ -56,7 +56,7 @@ export const MProjects = [
     code: "https://glam-wear.vercel.app/",
   },
   {
-    name: "Travelling",
+    name: "WayGo Travelling",
     Type: "wordpress",
     image: "/projects/travelling.png",
     URL: "https://travelling.site.qubefyn.com/",
