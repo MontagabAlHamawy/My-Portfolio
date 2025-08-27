@@ -43,7 +43,7 @@ export default function Home() {
             variants={fadeIn("up", "tween", 0.2, 1)}
             className="btn btn-sm btn-accent w-[164px] xl:mb-0"
           >
-            <p className="text-base font-400 text-white">about</p>
+            <p className="text-base font-400 text-white">{t("button")}</p>
           </motion.div>
         </Link>
       </div>
