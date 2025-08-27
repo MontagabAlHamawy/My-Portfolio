@@ -56,6 +56,20 @@ export const MProjects = [
     code: "https://glam-wear.vercel.app/",
   },
   {
+    name: "Travelling",
+    Type: "wordpress",
+    image: "/projects/travelling.png",
+    URL: "https://travelling.site.qubefyn.com/",
+    code: "https://travelling.site.qubefyn.com/",
+  },
+  {
+    name: "Losso Coffee",
+    Type: "wordpress",
+    image: "/projects/coffee.png",
+    URL: "https://coffe.site.qubefyn.com/",
+    code: "https://coffe.site.qubefyn.com/",
+  },
+  {
     name: "Fashion",
     Type: "wordpress",
     image: "/projects/fashion.png",
