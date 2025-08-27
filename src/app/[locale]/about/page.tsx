@@ -59,6 +59,31 @@ export default function About() {
           >
             {t("text3")}
           </motion.p>
+           <br />
+          <motion.div
+            variants={fadeIn("up", "tween", 0.4, 1)}
+            className="text-white/80 font-500 text-xl xl:text-lg"
+          >
+          <h1 className="text-lg font-bold text-accent">{t("title1")}</h1>
+            <p>- {t("t1")}</p>
+            <p>- {t("t2")}</p>
+            <p>- {t("t3")}</p>
+            <p>- {t("t4")}</p>
+          </motion.div>
+          <br />
+          <motion.p
+            variants={fadeIn("up", "tween", 0.4, 1)}
+            className="text-white/80 font-500 text-xl xl:text-lg "
+          >
+            {t("text4")}
+          </motion.p>
+           <br />
+          <motion.p
+            variants={fadeIn("up", "tween", 0.4, 1)}
+            className="text-white/80 font-500 text-xl xl:text-lg "
+          >
+            {t("text5")}
+          </motion.p>
         </div>
         <div
           className={`${
