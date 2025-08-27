@@ -9,7 +9,7 @@ import { fadeIn } from "@/utils/motion";
 export default function Home() {
   const t = useTranslations("Home");
   const localActive = useLocale();
-  const linked = localActive + "/about";
+  // const linked = localActive + "/about";
 
 
   return (
@@ -35,7 +35,7 @@ export default function Home() {
           {t("text")}
         </motion.p>
         <Link
-          href={linked}
+          href="https://drive.google.com/uc?export=download&id=1bcfCV8DBhVgbgJqfP8KR8JrtbsDBkwRs"
           aria-label="About"
           className="flex justify-center items-center"
         >
